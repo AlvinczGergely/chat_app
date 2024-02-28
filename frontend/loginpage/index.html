@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <script src="https://unpkg.com/htmx.org@1.9.10" integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC" crossorigin="anonymous"></script>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css'>
+  <link rel="stylesheet" href="./style.css">
+  
+
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<h2>Welcome to Gergely's chat!</h2>
+<div class="container" id="container">
+	<div class="form-container sign-up-container">
+		<form>
+			<h1>Create Account</h1>
+			<!--
+			<div class="social-container">
+				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+			</div>
+			<span>or use your account</span>
+			//-->
+			<div hx-target="this" hx-swap="outerHTML">
+				<input type="text" name="name" value="" placeholder="Name" hx-post="/reg/name" hx-indicator="#ind"/>
+			</div>
+			<div hx-target="this" hx-swap="outerHTML">
+				<input type="email" name="email" value="" placeholder="Email" hx-post="/reg/email" hx-indicator="#ind"/>
+			</div>
+				<div hx-target="this" hx-swap="outerHTML">
+					<input type="password" name="password" value="" placeholder="Password" hx-post="/reg/passweord" hx-indicator="#ind"/>
+				</div>
+				<div hx-target="this" hx-swap="outerHTML">
+					<input type="password" name="repeta_password" value="" placeholder="Repeta password" hx-post="/reg/comfirm_passweord" hx-indicator="#ind"/>
+				</div>
+			<div hx-target="this" hx-swap="outerHTML">
+				<button type="submit" hx-post="/registration" hx-include="closest form" hx-trigger="click">Sign Up</button>
+			</div>
+		</form>
+	</div>
+	<div class="form-container sign-in-container">
+		<form>
+			<h1>Sign in</h1>
+			<!--
+			<div class="social-container">
+				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+			</div>
+			<span>or use your account</span>
+			//-->
+			<input type="email" name="username" value="" placeholder="Email" />
+			<input type="password" name="password" value="" placeholder="Password"/>
+			
+			<a href="#"
+				hx-get="/forgott_password" 
+				hx-target="#modals-here" 
+				hx-trigger="click" 
+				data-bs-toggle="modal" 
+				data-bs-target="#modals-here"
+				class="btn btn-primary">Forgot your password?
+			</a>
+			<div id="modals-here"
+    			class="modal modal-blur fade"
+    			style="display: none"
+    			aria-hidden="false"
+    			tabindex="-1">
+    		<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        		<div class="modal-content"></div>
+    		</div>
+			</div>
+			<div hx-target="this" hx-swap="outerHTML">
+				<button hx-post="/login"
+					hx-target="body"
+					hx-include="closest form" 
+					hx-trigger="click replace">Sign In
+			</button>
+			</div>
+		</form>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h1>Welcome Back!</h1>
+				<p>To keep connected with us please login with your personal info</p>
+				<button class="ghost" id="signIn">Sign In</button>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1>Hello, Friend!</h1>
+				<p>Enter your personal details and start journey with us</p>
+				<button class="ghost" id="signUp">Sign Up</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- partial -->
+  <script>
+	const signUpButton = document.getElementById('signUp');
+const signInButton = document.getElementById('signIn');
+const container = document.getElementById('container');
+
+signUpButton.addEventListener('click', () => {
+	container.classList.add("right-panel-active");
+});
+
+signInButton.addEventListener('click', () => {
+	container.classList.remove("right-panel-active");
+});
+  </script>
+  
+
+</body>
+</html>
