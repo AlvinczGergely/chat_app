@@ -24,20 +24,23 @@
 			</div>
 			<span>or use your account</span>
 			//-->
-			<div hx-target="this" hx-swap="outerHTML">
+			<div hx-swap="outerHTML">
 				<input type="text" name="name" value="" placeholder="Name" hx-post="/reg/name" hx-indicator="#ind"/>
 			</div>
-			<div hx-target="this" hx-swap="outerHTML">
+			<div hx-swap="outerHTML">
 				<input type="email" name="email" value="" placeholder="Email" hx-post="/reg/email" hx-indicator="#ind"/>
 			</div>
-				<div hx-target="this" hx-swap="outerHTML">
+				<div hx-swap="outerHTML">
 					<input type="password" name="password" value="" placeholder="Password" hx-post="/reg/passweord" hx-indicator="#ind"/>
 				</div>
-				<div hx-target="this" hx-swap="outerHTML">
+				<div  hx-swap="outerHTML">
 					<input type="password" name="repeta_password" value="" placeholder="Repeta password" hx-post="/reg/comfirm_passweord" hx-indicator="#ind"/>
 				</div>
-			<div hx-target="this" hx-swap="outerHTML">
-				<button type="submit" hx-post="/registration" hx-include="closest form" hx-trigger="click">Sign Up</button>
+			<div hx-target="body" hx-swap="outerHTML">
+				<button type="submit" hx-post="/registration" 
+										hx-include="closest form" 
+										hx-trigger="click">Sign Up
+				</button>
 			</div>
 		</form>
 	</div>

@@ -1,6 +1,10 @@
 #include <SQLiteCpp/SQLiteCpp.h>
 #include <pistache/endpoint.h>
 
+#include "SQLiteCpp/Column.h"
+#include "SQLiteCpp/Database.h"
+#include "SQLiteCpp/Exception.h"
+#include "SQLiteCpp/Statement.h"
 #include "user.hpp"
 using namespace Pistache;
 
@@ -19,8 +23,7 @@ void Users::insert_into_user_table(std::string email_addres, std::string passwor
   query.bind(1, email_addres);
   query.bind(2, password);
   query.bind(3, user_name);
-  query.bind(4, NULL);
-
+  query.bind(4);
 
   // Execute the statement
   query.exec();
@@ -120,7 +123,7 @@ bool Users::valid_password(std::string email_addres, std::string password)
 
     while (n_query.executeStep())
     {
-      std::string current_password = n_query.getColumn(1);
+      std::string current_password = n_query.getColumn(0);
 
       if (current_password == password)
       {
@@ -134,7 +137,7 @@ bool Users::valid_password(std::string email_addres, std::string password)
   }
   catch(const std::exception& e)
   {
-    std::cout << "exception after valid_user was called: " << e.what() << std::endl;
+    std::cout << "exception after valid_password was called: " << e.what() << std::endl;
   }
   
 }
@@ -173,4 +176,4 @@ bool Users::email_alredy_taken(std::string email_addres)
 }
 
 
-
+ 

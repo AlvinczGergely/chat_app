@@ -1,11 +1,13 @@
 #ifndef LOGIN_HPP
 #define LOGIN_HPP
 
+#include <cstdint>
 #include <pistache/endpoint.h>
 #include <pistache/http.h>
 #include <pistache/mime.h>
 #include <pistache/net.h>
 #include <pistache/router.h>
+#include <pistache/http_headers.h>
 #include "user.hpp"
 #include <fstream>
 #include <nlohmann/json.hpp>
@@ -22,6 +24,18 @@
 
 using namespace Pistache;
 using json = nlohmann::json;
+
+
+/*
+class HtmxRedirect : public Http::Header 
+{    
+    NAME("HX-Redirect")
+    
+    void parse(const std::string& data){}
+    void write(std::ostream& os){}
+    virtual uint64_t hash()override{}
+};
+*/
 
 
 class Services

@@ -1,7 +1,9 @@
+#include "pistache/http_header.h"
 #include "user.hpp"
 #include "services.hpp"
 #include <pistache/endpoint.h>
 #include <pistache/http.h>
+#include <pistache/http_headers.h>
 #include <pistache/mime.h>
 #include <pistache/net.h>
 #include <pistache/router.h>
@@ -246,7 +248,9 @@ void Services::login_handler(const Request &request, Response response)
     else
     {
         response.headers().add<Pistache::Http::Header::Location>("/chatsite");
+        response.headers().addRaw(Pistache::Http::Header::Raw{"HX-Redirect", ""});
         response.send(Pistache::Http::Code::See_Other);
+        
     }
     
 }
@@ -525,7 +529,8 @@ void Services::registration_handler(const Request &request, Response response)
     response.send(Pistache::Http::Code::See_Other);
 }
 
-void Services::temp_password_handling(const Pistache::Rest::Request &request, Pistache::Http::ResponseWriter response) {
+void Services::temp_password_handling(const Pistache::Rest::Request &request, Pistache::Http::ResponseWriter response) 
+{
     std::cout << "received a GET request, temp_password_handling was called." << std::endl;
 
     std::string modalHtml = R"(
@@ -562,8 +567,8 @@ void Services::run()
    std::cout << "handler was set \n"; 
 
    std::cout << "server should be start now :-) \n";
+   std::cout << "print NULL: " << NULL << std::endl;
 
    m_end_point->serve();
    std::cout << "server started.\n"; 
 }
-

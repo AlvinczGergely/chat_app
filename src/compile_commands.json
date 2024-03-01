@@ -1,0 +1,254 @@
+[
+{
+  "directory": "/home/gergely/cpp_projects/chat-with-gpt/build/src",
+  "command": "/usr/bin/c++ -DSQLITE_ENABLE_COLUMN_METADATA -I/home/gergely/cpp_projects/chat-with-gpt/build/_deps/sqlitecpp-src/include -I/include -I/home/gergely/cpp_projects/chat-with-gpt/build/_deps/sqlitecpp-src/sqlite3 -I/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/../include -I/home/gergely/cpp_projects/chat-with-gpt/build/_deps/json-src/include -O2 -g -DNDEBUG -std=gnu++17 -o CMakeFiles/Chat_app.dir/main.cpp.o -c /home/gergely/cpp_projects/chat-with-gpt/src/main.cpp",
+  "file": "/home/gergely/cpp_projects/chat-with-gpt/src/main.cpp",
+  "output": "src/CMakeFiles/Chat_app.dir/main.cpp.o"
+},
+{
+  "directory": "/home/gergely/cpp_projects/chat-with-gpt/build/src",
+  "command": "/usr/bin/c++ -DSQLITE_ENABLE_COLUMN_METADATA -I/home/gergely/cpp_projects/chat-with-gpt/build/_deps/sqlitecpp-src/include -I/include -I/home/gergely/cpp_projects/chat-with-gpt/build/_deps/sqlitecpp-src/sqlite3 -I/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/../include -I/home/gergely/cpp_projects/chat-with-gpt/build/_deps/json-src/include -O2 -g -DNDEBUG -std=gnu++17 -o CMakeFiles/Chat_app.dir/generator.cpp.o -c /home/gergely/cpp_projects/chat-with-gpt/src/generator.cpp",
+  "file": "/home/gergely/cpp_projects/chat-with-gpt/src/generator.cpp",
+  "output": "src/CMakeFiles/Chat_app.dir/generator.cpp.o"
+},
+{
+  "directory": "/home/gergely/cpp_projects/chat-with-gpt/build/src",
+  "command": "/usr/bin/c++ -DSQLITE_ENABLE_COLUMN_METADATA -I/home/gergely/cpp_projects/chat-with-gpt/build/_deps/sqlitecpp-src/include -I/include -I/home/gergely/cpp_projects/chat-with-gpt/build/_deps/sqlitecpp-src/sqlite3 -I/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/../include -I/home/gergely/cpp_projects/chat-with-gpt/build/_deps/json-src/include -O2 -g -DNDEBUG -std=gnu++17 -o CMakeFiles/Chat_app.dir/user.cpp.o -c /home/gergely/cpp_projects/chat-with-gpt/src/user.cpp",
+  "file": "/home/gergely/cpp_projects/chat-with-gpt/src/user.cpp",
+  "output": "src/CMakeFiles/Chat_app.dir/user.cpp.o"
+},
+{
+  "directory": "/home/gergely/cpp_projects/chat-with-gpt/build/src",
+  "command": "/usr/bin/c++ -DSQLITE_ENABLE_COLUMN_METADATA -I/home/gergely/cpp_projects/chat-with-gpt/build/_deps/sqlitecpp-src/include -I/include -I/home/gergely/cpp_projects/chat-with-gpt/build/_deps/sqlitecpp-src/sqlite3 -I/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/../include -I/home/gergely/cpp_projects/chat-with-gpt/build/_deps/json-src/include -O2 -g -DNDEBUG -std=gnu++17 -o CMakeFiles/Chat_app.dir/services.cpp.o -c /home/gergely/cpp_projects/chat-with-gpt/src/services.cpp",
+  "file": "/home/gergely/cpp_projects/chat-with-gpt/src/services.cpp",
+  "output": "src/CMakeFiles/Chat_app.dir/services.cpp.o"
+},
+{
+  "directory": "/home/gergely/cpp_projects/chat-with-gpt/build/src",
+  "command": "/usr/bin/c++ -DSQLITE_ENABLE_COLUMN_METADATA -I/home/gergely/cpp_projects/chat-with-gpt/build/_deps/sqlitecpp-src/include -I/include -I/home/gergely/cpp_projects/chat-with-gpt/build/_deps/sqlitecpp-src/sqlite3 -I/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/../include -I/home/gergely/cpp_projects/chat-with-gpt/build/_deps/json-src/include -O2 -g -DNDEBUG -std=gnu++17 -o CMakeFiles/Chat_app.dir/pugixml/src/pugixml.cpp.o -c /home/gergely/cpp_projects/chat-with-gpt/src/pugixml/src/pugixml.cpp",
+  "file": "/home/gergely/cpp_projects/chat-with-gpt/src/pugixml/src/pugixml.cpp",
+  "output": "src/CMakeFiles/Chat_app.dir/pugixml/src/pugixml.cpp.o"
+},
+{
+  "directory": "/home/gergely/cpp_projects/chat-with-gpt/build/_deps/sqlitecpp-build",
+  "command": "/usr/bin/c++ -DSQLITE_ENABLE_COLUMN_METADATA -I/home/gergely/cpp_projects/chat-with-gpt/build/_deps/sqlitecpp-src/include -I/home/gergely/cpp_projects/chat-with-gpt/build/_deps/sqlitecpp-src/sqlite3  -Wall -Wextra -Wpedantic -Wswitch-enum -Wshadow -Wno-long-long -O2 -g -DNDEBUG -std=gnu++17 -fPIC -fstack-protector -o CMakeFiles/SQLiteCpp.dir/src/Backup.cpp.o -c /home/gergely/cpp_projects/chat-with-gpt/build/_deps/sqlitecpp-src/src/Backup.cpp",
+  "file": "/home/gergely/cpp_projects/chat-with-gpt/build/_deps/sqlitecpp-src/src/Backup.cpp",
+  "output": "_deps/sqlitecpp-build/CMakeFiles/SQLiteCpp.dir/src/Backup.cpp.o"
+},
+{
+  "directory": "/home/gergely/cpp_projects/chat-with-gpt/build/_deps/sqlitecpp-build",
+  "command": "/usr/bin/c++ -DSQLITE_ENABLE_COLUMN_METADATA -I/home/gergely/cpp_projects/chat-with-gpt/build/_deps/sqlitecpp-src/include -I/home/gergely/cpp_projects/chat-with-gpt/build/_deps/sqlitecpp-src/sqlite3  -Wall -Wextra -Wpedantic -Wswitch-enum -Wshadow -Wno-long-long -O2 -g -DNDEBUG -std=gnu++17 -fPIC -fstack-protector -o CMakeFiles/SQLiteCpp.dir/src/Column.cpp.o -c /home/gergely/cpp_projects/chat-with-gpt/build/_deps/sqlitecpp-src/src/Column.cpp",
+  "file": "/home/gergely/cpp_projects/chat-with-gpt/build/_deps/sqlitecpp-src/src/Column.cpp",
+  "output": "_deps/sqlitecpp-build/CMakeFiles/SQLiteCpp.dir/src/Column.cpp.o"
+},
+{
+  "directory": "/home/gergely/cpp_projects/chat-with-gpt/build/_deps/sqlitecpp-build",
+  "command": "/usr/bin/c++ -DSQLITE_ENABLE_COLUMN_METADATA -I/home/gergely/cpp_projects/chat-with-gpt/build/_deps/sqlitecpp-src/include -I/home/gergely/cpp_projects/chat-with-gpt/build/_deps/sqlitecpp-src/sqlite3  -Wall -Wextra -Wpedantic -Wswitch-enum -Wshadow -Wno-long-long -O2 -g -DNDEBUG -std=gnu++17 -fPIC -fstack-protector -o CMakeFiles/SQLiteCpp.dir/src/Database.cpp.o -c /home/gergely/cpp_projects/chat-with-gpt/build/_deps/sqlitecpp-src/src/Database.cpp",
+  "file": "/home/gergely/cpp_projects/chat-with-gpt/build/_deps/sqlitecpp-src/src/Database.cpp",
+  "output": "_deps/sqlitecpp-build/CMakeFiles/SQLiteCpp.dir/src/Database.cpp.o"
+},
+{
+  "directory": "/home/gergely/cpp_projects/chat-with-gpt/build/_deps/sqlitecpp-build",
+  "command": "/usr/bin/c++ -DSQLITE_ENABLE_COLUMN_METADATA -I/home/gergely/cpp_projects/chat-with-gpt/build/_deps/sqlitecpp-src/include -I/home/gergely/cpp_projects/chat-with-gpt/build/_deps/sqlitecpp-src/sqlite3  -Wall -Wextra -Wpedantic -Wswitch-enum -Wshadow -Wno-long-long -O2 -g -DNDEBUG -std=gnu++17 -fPIC -fstack-protector -o CMakeFiles/SQLiteCpp.dir/src/Exception.cpp.o -c /home/gergely/cpp_projects/chat-with-gpt/build/_deps/sqlitecpp-src/src/Exception.cpp",
+  "file": "/home/gergely/cpp_projects/chat-with-gpt/build/_deps/sqlitecpp-src/src/Exception.cpp",
+  "output": "_deps/sqlitecpp-build/CMakeFiles/SQLiteCpp.dir/src/Exception.cpp.o"
+},
+{
+  "directory": "/home/gergely/cpp_projects/chat-with-gpt/build/_deps/sqlitecpp-build",
+  "command": "/usr/bin/c++ -DSQLITE_ENABLE_COLUMN_METADATA -I/home/gergely/cpp_projects/chat-with-gpt/build/_deps/sqlitecpp-src/include -I/home/gergely/cpp_projects/chat-with-gpt/build/_deps/sqlitecpp-src/sqlite3  -Wall -Wextra -Wpedantic -Wswitch-enum -Wshadow -Wno-long-long -O2 -g -DNDEBUG -std=gnu++17 -fPIC -fstack-protector -o CMakeFiles/SQLiteCpp.dir/src/Savepoint.cpp.o -c /home/gergely/cpp_projects/chat-with-gpt/build/_deps/sqlitecpp-src/src/Savepoint.cpp",
+  "file": "/home/gergely/cpp_projects/chat-with-gpt/build/_deps/sqlitecpp-src/src/Savepoint.cpp",
+  "output": "_deps/sqlitecpp-build/CMakeFiles/SQLiteCpp.dir/src/Savepoint.cpp.o"
+},
+{
+  "directory": "/home/gergely/cpp_projects/chat-with-gpt/build/_deps/sqlitecpp-build",
+  "command": "/usr/bin/c++ -DSQLITE_ENABLE_COLUMN_METADATA -I/home/gergely/cpp_projects/chat-with-gpt/build/_deps/sqlitecpp-src/include -I/home/gergely/cpp_projects/chat-with-gpt/build/_deps/sqlitecpp-src/sqlite3  -Wall -Wextra -Wpedantic -Wswitch-enum -Wshadow -Wno-long-long -O2 -g -DNDEBUG -std=gnu++17 -fPIC -fstack-protector -o CMakeFiles/SQLiteCpp.dir/src/Statement.cpp.o -c /home/gergely/cpp_projects/chat-with-gpt/build/_deps/sqlitecpp-src/src/Statement.cpp",
+  "file": "/home/gergely/cpp_projects/chat-with-gpt/build/_deps/sqlitecpp-src/src/Statement.cpp",
+  "output": "_deps/sqlitecpp-build/CMakeFiles/SQLiteCpp.dir/src/Statement.cpp.o"
+},
+{
+  "directory": "/home/gergely/cpp_projects/chat-with-gpt/build/_deps/sqlitecpp-build",
+  "command": "/usr/bin/c++ -DSQLITE_ENABLE_COLUMN_METADATA -I/home/gergely/cpp_projects/chat-with-gpt/build/_deps/sqlitecpp-src/include -I/home/gergely/cpp_projects/chat-with-gpt/build/_deps/sqlitecpp-src/sqlite3  -Wall -Wextra -Wpedantic -Wswitch-enum -Wshadow -Wno-long-long -O2 -g -DNDEBUG -std=gnu++17 -fPIC -fstack-protector -o CMakeFiles/SQLiteCpp.dir/src/Transaction.cpp.o -c /home/gergely/cpp_projects/chat-with-gpt/build/_deps/sqlitecpp-src/src/Transaction.cpp",
+  "file": "/home/gergely/cpp_projects/chat-with-gpt/build/_deps/sqlitecpp-src/src/Transaction.cpp",
+  "output": "_deps/sqlitecpp-build/CMakeFiles/SQLiteCpp.dir/src/Transaction.cpp.o"
+},
+{
+  "directory": "/home/gergely/cpp_projects/chat-with-gpt/build/_deps/sqlitecpp-build/sqlite3",
+  "command": "/usr/bin/cc -DSQLITE_ENABLE_COLUMN_METADATA -I/home/gergely/cpp_projects/chat-with-gpt/build/_deps/sqlitecpp-src/sqlite3 -O2 -g -DNDEBUG -fPIC -fstack-protector -ffunction-sections -Wimplicit-fallthrough=0 -Wno-cast-function-type -o CMakeFiles/sqlite3.dir/sqlite3.c.o -c /home/gergely/cpp_projects/chat-with-gpt/build/_deps/sqlitecpp-src/sqlite3/sqlite3.c",
+  "file": "/home/gergely/cpp_projects/chat-with-gpt/build/_deps/sqlitecpp-src/sqlite3/sqlite3.c",
+  "output": "_deps/sqlitecpp-build/sqlite3/CMakeFiles/sqlite3.dir/sqlite3.c.o"
+},
+{
+  "directory": "/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-build/src",
+  "command": "/usr/bin/c++ -DONLY_C_LOCALE=1 -I/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/../subprojects/hinnant-date/include -I/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/../include -O2 -g -DNDEBUG -std=gnu++17 -fPIC -Wall -Wextra -Wpedantic -Wconversion -Wno-sign-conversion -Wno-missing-field-initializers -o CMakeFiles/pistache.dir/common/base64.cc.o -c /home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/common/base64.cc",
+  "file": "/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/common/base64.cc",
+  "output": "_deps/pistache-build/src/CMakeFiles/pistache.dir/common/base64.cc.o"
+},
+{
+  "directory": "/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-build/src",
+  "command": "/usr/bin/c++ -DONLY_C_LOCALE=1 -I/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/../subprojects/hinnant-date/include -I/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/../include -O2 -g -DNDEBUG -std=gnu++17 -fPIC -Wall -Wextra -Wpedantic -Wconversion -Wno-sign-conversion -Wno-missing-field-initializers -o CMakeFiles/pistache.dir/common/cookie.cc.o -c /home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/common/cookie.cc",
+  "file": "/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/common/cookie.cc",
+  "output": "_deps/pistache-build/src/CMakeFiles/pistache.dir/common/cookie.cc.o"
+},
+{
+  "directory": "/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-build/src",
+  "command": "/usr/bin/c++ -DONLY_C_LOCALE=1 -I/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/../subprojects/hinnant-date/include -I/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/../include -O2 -g -DNDEBUG -std=gnu++17 -fPIC -Wall -Wextra -Wpedantic -Wconversion -Wno-sign-conversion -Wno-missing-field-initializers -o CMakeFiles/pistache.dir/common/description.cc.o -c /home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/common/description.cc",
+  "file": "/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/common/description.cc",
+  "output": "_deps/pistache-build/src/CMakeFiles/pistache.dir/common/description.cc.o"
+},
+{
+  "directory": "/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-build/src",
+  "command": "/usr/bin/c++ -DONLY_C_LOCALE=1 -I/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/../subprojects/hinnant-date/include -I/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/../include -O2 -g -DNDEBUG -std=gnu++17 -fPIC -Wall -Wextra -Wpedantic -Wconversion -Wno-sign-conversion -Wno-missing-field-initializers -o CMakeFiles/pistache.dir/common/http.cc.o -c /home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/common/http.cc",
+  "file": "/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/common/http.cc",
+  "output": "_deps/pistache-build/src/CMakeFiles/pistache.dir/common/http.cc.o"
+},
+{
+  "directory": "/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-build/src",
+  "command": "/usr/bin/c++ -DONLY_C_LOCALE=1 -I/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/../subprojects/hinnant-date/include -I/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/../include -O2 -g -DNDEBUG -std=gnu++17 -fPIC -Wall -Wextra -Wpedantic -Wconversion -Wno-sign-conversion -Wno-missing-field-initializers -o CMakeFiles/pistache.dir/common/http_defs.cc.o -c /home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/common/http_defs.cc",
+  "file": "/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/common/http_defs.cc",
+  "output": "_deps/pistache-build/src/CMakeFiles/pistache.dir/common/http_defs.cc.o"
+},
+{
+  "directory": "/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-build/src",
+  "command": "/usr/bin/c++ -DONLY_C_LOCALE=1 -I/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/../subprojects/hinnant-date/include -I/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/../include -O2 -g -DNDEBUG -std=gnu++17 -fPIC -Wall -Wextra -Wpedantic -Wconversion -Wno-sign-conversion -Wno-missing-field-initializers -o CMakeFiles/pistache.dir/common/http_header.cc.o -c /home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/common/http_header.cc",
+  "file": "/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/common/http_header.cc",
+  "output": "_deps/pistache-build/src/CMakeFiles/pistache.dir/common/http_header.cc.o"
+},
+{
+  "directory": "/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-build/src",
+  "command": "/usr/bin/c++ -DONLY_C_LOCALE=1 -I/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/../subprojects/hinnant-date/include -I/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/../include -O2 -g -DNDEBUG -std=gnu++17 -fPIC -Wall -Wextra -Wpedantic -Wconversion -Wno-sign-conversion -Wno-missing-field-initializers -o CMakeFiles/pistache.dir/common/http_headers.cc.o -c /home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/common/http_headers.cc",
+  "file": "/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/common/http_headers.cc",
+  "output": "_deps/pistache-build/src/CMakeFiles/pistache.dir/common/http_headers.cc.o"
+},
+{
+  "directory": "/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-build/src",
+  "command": "/usr/bin/c++ -DONLY_C_LOCALE=1 -I/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/../subprojects/hinnant-date/include -I/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/../include -O2 -g -DNDEBUG -std=gnu++17 -fPIC -Wall -Wextra -Wpedantic -Wconversion -Wno-sign-conversion -Wno-missing-field-initializers -o CMakeFiles/pistache.dir/common/mime.cc.o -c /home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/common/mime.cc",
+  "file": "/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/common/mime.cc",
+  "output": "_deps/pistache-build/src/CMakeFiles/pistache.dir/common/mime.cc.o"
+},
+{
+  "directory": "/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-build/src",
+  "command": "/usr/bin/c++ -DONLY_C_LOCALE=1 -I/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/../subprojects/hinnant-date/include -I/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/../include -O2 -g -DNDEBUG -std=gnu++17 -fPIC -Wall -Wextra -Wpedantic -Wconversion -Wno-sign-conversion -Wno-missing-field-initializers -o CMakeFiles/pistache.dir/common/net.cc.o -c /home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/common/net.cc",
+  "file": "/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/common/net.cc",
+  "output": "_deps/pistache-build/src/CMakeFiles/pistache.dir/common/net.cc.o"
+},
+{
+  "directory": "/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-build/src",
+  "command": "/usr/bin/c++ -DONLY_C_LOCALE=1 -I/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/../subprojects/hinnant-date/include -I/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/../include -O2 -g -DNDEBUG -std=gnu++17 -fPIC -Wall -Wextra -Wpedantic -Wconversion -Wno-sign-conversion -Wno-missing-field-initializers -o CMakeFiles/pistache.dir/common/os.cc.o -c /home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/common/os.cc",
+  "file": "/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/common/os.cc",
+  "output": "_deps/pistache-build/src/CMakeFiles/pistache.dir/common/os.cc.o"
+},
+{
+  "directory": "/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-build/src",
+  "command": "/usr/bin/c++ -DONLY_C_LOCALE=1 -I/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/../subprojects/hinnant-date/include -I/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/../include -O2 -g -DNDEBUG -std=gnu++17 -fPIC -Wall -Wextra -Wpedantic -Wconversion -Wno-sign-conversion -Wno-missing-field-initializers -o CMakeFiles/pistache.dir/common/peer.cc.o -c /home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/common/peer.cc",
+  "file": "/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/common/peer.cc",
+  "output": "_deps/pistache-build/src/CMakeFiles/pistache.dir/common/peer.cc.o"
+},
+{
+  "directory": "/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-build/src",
+  "command": "/usr/bin/c++ -DONLY_C_LOCALE=1 -I/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/../subprojects/hinnant-date/include -I/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/../include -O2 -g -DNDEBUG -std=gnu++17 -fPIC -Wall -Wextra -Wpedantic -Wconversion -Wno-sign-conversion -Wno-missing-field-initializers -o CMakeFiles/pistache.dir/common/reactor.cc.o -c /home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/common/reactor.cc",
+  "file": "/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/common/reactor.cc",
+  "output": "_deps/pistache-build/src/CMakeFiles/pistache.dir/common/reactor.cc.o"
+},
+{
+  "directory": "/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-build/src",
+  "command": "/usr/bin/c++ -DONLY_C_LOCALE=1 -I/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/../subprojects/hinnant-date/include -I/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/../include -O2 -g -DNDEBUG -std=gnu++17 -fPIC -Wall -Wextra -Wpedantic -Wconversion -Wno-sign-conversion -Wno-missing-field-initializers -o CMakeFiles/pistache.dir/common/stream.cc.o -c /home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/common/stream.cc",
+  "file": "/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/common/stream.cc",
+  "output": "_deps/pistache-build/src/CMakeFiles/pistache.dir/common/stream.cc.o"
+},
+{
+  "directory": "/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-build/src",
+  "command": "/usr/bin/c++ -DONLY_C_LOCALE=1 -I/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/../subprojects/hinnant-date/include -I/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/../include -O2 -g -DNDEBUG -std=gnu++17 -fPIC -Wall -Wextra -Wpedantic -Wconversion -Wno-sign-conversion -Wno-missing-field-initializers -o CMakeFiles/pistache.dir/common/string_logger.cc.o -c /home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/common/string_logger.cc",
+  "file": "/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/common/string_logger.cc",
+  "output": "_deps/pistache-build/src/CMakeFiles/pistache.dir/common/string_logger.cc.o"
+},
+{
+  "directory": "/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-build/src",
+  "command": "/usr/bin/c++ -DONLY_C_LOCALE=1 -I/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/../subprojects/hinnant-date/include -I/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/../include -O2 -g -DNDEBUG -std=gnu++17 -fPIC -Wall -Wextra -Wpedantic -Wconversion -Wno-sign-conversion -Wno-missing-field-initializers -o CMakeFiles/pistache.dir/common/tcp.cc.o -c /home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/common/tcp.cc",
+  "file": "/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/common/tcp.cc",
+  "output": "_deps/pistache-build/src/CMakeFiles/pistache.dir/common/tcp.cc.o"
+},
+{
+  "directory": "/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-build/src",
+  "command": "/usr/bin/c++ -DONLY_C_LOCALE=1 -I/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/../subprojects/hinnant-date/include -I/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/../include -O2 -g -DNDEBUG -std=gnu++17 -fPIC -Wall -Wextra -Wpedantic -Wconversion -Wno-sign-conversion -Wno-missing-field-initializers -o CMakeFiles/pistache.dir/common/timer_pool.cc.o -c /home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/common/timer_pool.cc",
+  "file": "/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/common/timer_pool.cc",
+  "output": "_deps/pistache-build/src/CMakeFiles/pistache.dir/common/timer_pool.cc.o"
+},
+{
+  "directory": "/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-build/src",
+  "command": "/usr/bin/c++ -DONLY_C_LOCALE=1 -I/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/../subprojects/hinnant-date/include -I/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/../include -O2 -g -DNDEBUG -std=gnu++17 -fPIC -Wall -Wextra -Wpedantic -Wconversion -Wno-sign-conversion -Wno-missing-field-initializers -o CMakeFiles/pistache.dir/common/transport.cc.o -c /home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/common/transport.cc",
+  "file": "/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/common/transport.cc",
+  "output": "_deps/pistache-build/src/CMakeFiles/pistache.dir/common/transport.cc.o"
+},
+{
+  "directory": "/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-build/src",
+  "command": "/usr/bin/c++ -DONLY_C_LOCALE=1 -I/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/../subprojects/hinnant-date/include -I/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/../include -O2 -g -DNDEBUG -std=gnu++17 -fPIC -Wall -Wextra -Wpedantic -Wconversion -Wno-sign-conversion -Wno-missing-field-initializers -o CMakeFiles/pistache.dir/common/utils.cc.o -c /home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/common/utils.cc",
+  "file": "/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/common/utils.cc",
+  "output": "_deps/pistache-build/src/CMakeFiles/pistache.dir/common/utils.cc.o"
+},
+{
+  "directory": "/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-build/src",
+  "command": "/usr/bin/c++ -DONLY_C_LOCALE=1 -I/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/../subprojects/hinnant-date/include -I/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/../include -O2 -g -DNDEBUG -std=gnu++17 -fPIC -Wall -Wextra -Wpedantic -Wconversion -Wno-sign-conversion -Wno-missing-field-initializers -o CMakeFiles/pistache.dir/server/endpoint.cc.o -c /home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/server/endpoint.cc",
+  "file": "/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/server/endpoint.cc",
+  "output": "_deps/pistache-build/src/CMakeFiles/pistache.dir/server/endpoint.cc.o"
+},
+{
+  "directory": "/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-build/src",
+  "command": "/usr/bin/c++ -DONLY_C_LOCALE=1 -I/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/../subprojects/hinnant-date/include -I/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/../include -O2 -g -DNDEBUG -std=gnu++17 -fPIC -Wall -Wextra -Wpedantic -Wconversion -Wno-sign-conversion -Wno-missing-field-initializers -o CMakeFiles/pistache.dir/server/listener.cc.o -c /home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/server/listener.cc",
+  "file": "/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/server/listener.cc",
+  "output": "_deps/pistache-build/src/CMakeFiles/pistache.dir/server/listener.cc.o"
+},
+{
+  "directory": "/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-build/src",
+  "command": "/usr/bin/c++ -DONLY_C_LOCALE=1 -I/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/../subprojects/hinnant-date/include -I/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/../include -O2 -g -DNDEBUG -std=gnu++17 -fPIC -Wall -Wextra -Wpedantic -Wconversion -Wno-sign-conversion -Wno-missing-field-initializers -o CMakeFiles/pistache.dir/server/router.cc.o -c /home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/server/router.cc",
+  "file": "/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/server/router.cc",
+  "output": "_deps/pistache-build/src/CMakeFiles/pistache.dir/server/router.cc.o"
+},
+{
+  "directory": "/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-build/src",
+  "command": "/usr/bin/c++ -DONLY_C_LOCALE=1 -I/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/../subprojects/hinnant-date/include -I/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/../include -O2 -g -DNDEBUG -std=gnu++17 -fPIC -Wall -Wextra -Wpedantic -Wconversion -Wno-sign-conversion -Wno-missing-field-initializers -o CMakeFiles/pistache.dir/client/client.cc.o -c /home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/client/client.cc",
+  "file": "/home/gergely/cpp_projects/chat-with-gpt/build/_deps/pistache-src/src/client/client.cc",
+  "output": "_deps/pistache-build/src/CMakeFiles/pistache.dir/client/client.cc.o"
+},
+{
+  "directory": "/home/gergely/cpp_projects/chat-with-gpt/build/tests",
+  "command": "/usr/bin/c++  -isystem /home/gergely/cpp_projects/chat-with-gpt/build/_deps/googletest-src/googletest/include -isystem /home/gergely/cpp_projects/chat-with-gpt/build/_deps/googletest-src/googletest -O2 -g -DNDEBUG -std=gnu++14 -o CMakeFiles/generator_tests.dir/generator_tests.cpp.o -c /home/gergely/cpp_projects/chat-with-gpt/tests/generator_tests.cpp",
+  "file": "/home/gergely/cpp_projects/chat-with-gpt/tests/generator_tests.cpp",
+  "output": "tests/CMakeFiles/generator_tests.dir/generator_tests.cpp.o"
+},
+{
+  "directory": "/home/gergely/cpp_projects/chat-with-gpt/build/tests",
+  "command": "/usr/bin/c++  -isystem /home/gergely/cpp_projects/chat-with-gpt/build/_deps/googletest-src/googletest/include -isystem /home/gergely/cpp_projects/chat-with-gpt/build/_deps/googletest-src/googletest -O2 -g -DNDEBUG -std=gnu++14 -o CMakeFiles/generator_tests.dir/__/src/pugixml/src/pugixml.cpp.o -c /home/gergely/cpp_projects/chat-with-gpt/src/pugixml/src/pugixml.cpp",
+  "file": "/home/gergely/cpp_projects/chat-with-gpt/src/pugixml/src/pugixml.cpp",
+  "output": "tests/CMakeFiles/generator_tests.dir/__/src/pugixml/src/pugixml.cpp.o"
+},
+{
+  "directory": "/home/gergely/cpp_projects/chat-with-gpt/build/tests",
+  "command": "/usr/bin/c++  -isystem /home/gergely/cpp_projects/chat-with-gpt/build/_deps/googletest-src/googletest/include -isystem /home/gergely/cpp_projects/chat-with-gpt/build/_deps/googletest-src/googletest -O2 -g -DNDEBUG -std=gnu++14 -o CMakeFiles/generator_tests.dir/__/src/generator.cpp.o -c /home/gergely/cpp_projects/chat-with-gpt/src/generator.cpp",
+  "file": "/home/gergely/cpp_projects/chat-with-gpt/src/generator.cpp",
+  "output": "tests/CMakeFiles/generator_tests.dir/__/src/generator.cpp.o"
+},
+{
+  "directory": "/home/gergely/cpp_projects/chat-with-gpt/build/_deps/googletest-build/googlemock",
+  "command": "/usr/bin/c++  -I/home/gergely/cpp_projects/chat-with-gpt/build/_deps/googletest-src/googlemock/include -I/home/gergely/cpp_projects/chat-with-gpt/build/_deps/googletest-src/googlemock -isystem /home/gergely/cpp_projects/chat-with-gpt/build/_deps/googletest-src/googletest/include -isystem /home/gergely/cpp_projects/chat-with-gpt/build/_deps/googletest-src/googletest -O2 -g -DNDEBUG -std=c++14 -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o CMakeFiles/gmock.dir/src/gmock-all.cc.o -c /home/gergely/cpp_projects/chat-with-gpt/build/_deps/googletest-src/googlemock/src/gmock-all.cc",
+  "file": "/home/gergely/cpp_projects/chat-with-gpt/build/_deps/googletest-src/googlemock/src/gmock-all.cc",
+  "output": "_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o"
+},
+{
+  "directory": "/home/gergely/cpp_projects/chat-with-gpt/build/_deps/googletest-build/googlemock",
+  "command": "/usr/bin/c++  -isystem /home/gergely/cpp_projects/chat-with-gpt/build/_deps/googletest-src/googlemock/include -isystem /home/gergely/cpp_projects/chat-with-gpt/build/_deps/googletest-src/googlemock -isystem /home/gergely/cpp_projects/chat-with-gpt/build/_deps/googletest-src/googletest/include -isystem /home/gergely/cpp_projects/chat-with-gpt/build/_deps/googletest-src/googletest -O2 -g -DNDEBUG -std=c++14 -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o CMakeFiles/gmock_main.dir/src/gmock_main.cc.o -c /home/gergely/cpp_projects/chat-with-gpt/build/_deps/googletest-src/googlemock/src/gmock_main.cc",
+  "file": "/home/gergely/cpp_projects/chat-with-gpt/build/_deps/googletest-src/googlemock/src/gmock_main.cc",
+  "output": "_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o"
+},
+{
+  "directory": "/home/gergely/cpp_projects/chat-with-gpt/build/_deps/googletest-build/googletest",
+  "command": "/usr/bin/c++  -I/home/gergely/cpp_projects/chat-with-gpt/build/_deps/googletest-src/googletest/include -I/home/gergely/cpp_projects/chat-with-gpt/build/_deps/googletest-src/googletest -O2 -g -DNDEBUG -std=c++14 -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o CMakeFiles/gtest.dir/src/gtest-all.cc.o -c /home/gergely/cpp_projects/chat-with-gpt/build/_deps/googletest-src/googletest/src/gtest-all.cc",
+  "file": "/home/gergely/cpp_projects/chat-with-gpt/build/_deps/googletest-src/googletest/src/gtest-all.cc",
+  "output": "_deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o"
+},
+{
+  "directory": "/home/gergely/cpp_projects/chat-with-gpt/build/_deps/googletest-build/googletest",
+  "command": "/usr/bin/c++  -isystem /home/gergely/cpp_projects/chat-with-gpt/build/_deps/googletest-src/googletest/include -isystem /home/gergely/cpp_projects/chat-with-gpt/build/_deps/googletest-src/googletest -O2 -g -DNDEBUG -std=c++14 -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o CMakeFiles/gtest_main.dir/src/gtest_main.cc.o -c /home/gergely/cpp_projects/chat-with-gpt/build/_deps/googletest-src/googletest/src/gtest_main.cc",
+  "file": "/home/gergely/cpp_projects/chat-with-gpt/build/_deps/googletest-src/googletest/src/gtest_main.cc",
+  "output": "_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o"
+}
+]
