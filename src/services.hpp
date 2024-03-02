@@ -71,6 +71,8 @@ public:
     void registration_handler(const Request &request, Response response);
     void password_repeta_check(const Request &request, Response response);
     void get_chat_site(const Request &request, Response response);
+    void redirect_get_forgott_password_site(const Request &request, Response response);
+    void get_forgott_password_site(const Request &request, Response response);
     void temp_password_handling(const Request &request, Response response);
     bool is_valid_session(const Request &request);
 

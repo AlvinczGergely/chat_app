@@ -38,7 +38,10 @@ void Services::config_routes()
     //login handler triggered by login butten
     Pistache::Rest::Routes::Post(chat_router, "/login", Pistache::Rest::Routes::bind(&Services::login_handler, this));
     Pistache::Rest::Routes::Get(chat_router, "/chatsite", Pistache::Rest::Routes::bind(&Services::get_chat_site, this));
-    Pistache::Rest::Routes::Get(chat_router, "/forgott_password", Pistache::Rest::Routes::bind(&Services::temp_password_handling, this));
+    //forgott password
+    Pistache::Rest::Routes::Get(chat_router, "/forgot_p", Pistache::Rest::Routes::bind(&Services::redirect_get_forgott_password_site, this));
+    Pistache::Rest::Routes::Get(chat_router, "/forgott_p_site", Pistache::Rest::Routes::bind(&Services::get_forgott_password_site, this));
+    Pistache::Rest::Routes::Post(chat_router, "/forgott_p/email", Pistache::Rest::Routes::bind(&Services::temp_password_handling, this));
     //registration  
     Pistache::Rest::Routes::Post(chat_router, "/registration", Pistache::Rest::Routes::bind(&Services::registration_handler, this));
     Pistache::Rest::Routes::Post(chat_router, "/reg/name", Pistache::Rest::Routes::bind(&Services::reg_name_validation, this));
@@ -527,6 +530,48 @@ void Services::registration_handler(const Request &request, Response response)
 
     response.headers().add<Pistache::Http::Header::Location>("/chatsite");
     response.send(Pistache::Http::Code::See_Other);
+}
+
+void Services::redirect_get_forgott_password_site(const Pistache::Rest::Request &request, Pistache::Http::ResponseWriter response)
+{
+    try 
+    {
+    response.headers().addRaw(Pistache::Http::Header::Raw{"HX-Redirect", ""});
+    response.headers().add<Pistache::Http::Header::Location>("/forgott_p_site");
+    response.send(Pistache::Http::Code::See_Other);
+    }
+    catch(std::exception& e)
+    {
+        std::cout << "exception occurred after redirecting to forgott password: " << e.what() << std::endl;
+        response.send(Http::Code::Not_Found, "Resource not found");
+    }
+
+}
+
+void Services::get_forgott_password_site(const Pistache::Rest::Request &request, Pistache::Http::ResponseWriter response) 
+{
+     std::cout<< "get forgot passeord site handler was called" << std::endl;
+    try
+    {
+        std::string htmlContent;
+        std::ifstream htmlFile("../../frontend/forgot_passowrd/index.html");
+        std::getline(htmlFile, htmlContent, '\0');
+
+        std::string cssContent;
+        std::ifstream cssFile("../../frontend/forgot_passowrd/style.css");
+        std::getline(cssFile, cssContent, '\0');
+
+        htmlContent += "\n<style>" + cssContent + "</style>";
+
+        response.headers().add<Pistache::Http::Header::ContentType>(MIME(Text, Html));
+
+        response.send(Http::Code::Ok, htmlContent);
+    }
+    catch(std::exception& e)
+    {
+        std::cout << "exception occurred: " << e.what() << std::endl;
+        response.send(Http::Code::Not_Found, "Resource not found");
+    }
 }
 
 void Services::temp_password_handling(const Pistache::Rest::Request &request, Pistache::Http::ResponseWriter response) 
