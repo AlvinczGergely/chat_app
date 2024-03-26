@@ -8,7 +8,7 @@
 #include <pistache/net.h>
 #include <pistache/router.h>
 #include <pistache/http_headers.h>
-#include "user.hpp"
+#include "user.h"
 #include <fstream>
 #include <nlohmann/json.hpp>
 #include <pistache/config.h>
@@ -60,7 +60,7 @@ public:
     void run();
     void is_port_used(int port_num);
     std::string w_space(std::string body_str);
-    std::string temp_cookie_generator(std::string email);
+    Http::Cookie login_cookie_generator(std::string email);
 
 
     using Request = Pistache::Rest::Request;
@@ -80,6 +80,8 @@ public:
     void reg_name_validation(const Request &request, Response response);
     void reg_password_validation(const Request &request, Response response);
     void reg_confirmp_calidation(const Request &request, Response response);
+    
+    void log_out_handler(const Request &request, Response response);
 
 
     

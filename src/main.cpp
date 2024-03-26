@@ -1,6 +1,6 @@
-#include "generator.hpp"
-#include "user.hpp"
-#include "services.hpp"
+#include "generator.h"
+#include "user.h"
+#include "services.h"
 
 #include <SQLiteCpp/SQLiteCpp.h>
 #include <pistache/endpoint.h>

@@ -1,6 +1,10 @@
+#include "pistache/http_defs.h"
 #include "pistache/http_header.h"
-#include "user.hpp"
-#include "services.hpp"
+#include "user.h"
+#include "generator.h"
+#include "services.h"
+#include <exception>
+#include <optional>
 #include <pistache/endpoint.h>
 #include <pistache/http.h>
 #include <pistache/http_headers.h>
@@ -48,6 +52,10 @@ void Services::config_routes()
     Pistache::Rest::Routes::Post(chat_router, "/reg/email", Pistache::Rest::Routes::bind(&Services::reg_email_validation, this));
     Pistache::Rest::Routes::Post(chat_router, "/reg/passweord", Pistache::Rest::Routes::bind(&Services::reg_password_validation, this));
     Pistache::Rest::Routes::Post(chat_router, "/reg/comfirm_passweord", Pistache::Rest::Routes::bind(&Services::reg_confirmp_calidation, this));
+    //Chatsite
+    Pistache::Rest::Routes::Post(chat_router, "/log_out", Pistache::Rest::Routes::bind(&Services::log_out_handler, this));
+    
+   
 }
 
 
@@ -69,7 +77,7 @@ void Services::is_port_used(int port_num)
    }
 }
 
-std::string Services::w_space(std::string body_str)     //   %20
+std::string Services::w_space(std::string body_str) 
 {
     for(int i = 0; i < body_str.size() - 2; ++i)
     {
@@ -140,34 +148,44 @@ std::string Services::w_space(std::string body_str)     //   %20
 
 bool Services::is_valid_session(const Request &request)
 {
-     // Access the CookieJar from the request object
-    const Pistache::Http::CookieJar& cookieJar = request.cookies();
+    std::cout << "valid session is called :-)" << std::endl;
 
-    // Check if the cookie for session identification exists
-    if (cookieJar.has("session_cookie")) {
-        // Get the session cookie
-        Pistache::Http::Cookie sessionCookie = cookieJar.get("session_cookie");
+    try
+    {
+        auto cookies = request.cookies();
 
-        // Your session validation logic here
-        // For example, check if the session is active, not expired, etc.
-        if (1 == 1) {
-            return true; // Session is valid
+        auto cookie = cookies.get("login_cookie");
+        std::string cookie_token = cookie.value;
+        std::cout << cookie_token << std::endl;
+
+        if(Users::check_cookie(cookie.value))
+        {
+            return true;
         }
+        else
+        {
+            return false;
+        }
+    } 
+    catch (std::exception e) 
+    {
+        std::cout << "exeption was catched in valid session: " << e.what() << std::endl;    
     }
 
-    return false; // Session is not valid or no session cookie found
+    return false;
 }
 
-std::string Services::temp_cookie_generator(std::string email)     //combination of user email and current time --> easy to crrack with brute force
+Http::Cookie Services::login_cookie_generator(std::string email)
 {
-    auto start = std::chrono::system_clock::now();
-    // Some computation here
-    auto end = std::chrono::system_clock::now();
- 
-    std::chrono::duration<double> elapsed_seconds = end-start;
-    std::time_t end_time = std::chrono::system_clock::to_time_t(end);
+    std::string cookie_value = Generators::random_number_generator(5);
 
-    std::string cookie = email[0] + std::to_string(elapsed_seconds.count());
+    std::cout << "the cookie value: " << cookie_value << std::endl;
+ 
+    Http::Cookie cookie("login_cookie", cookie_value);
+
+    Users::insert_cookie_into_users(email, cookie_value); //also inserting the cookie value to the db here becosue why not :-) 
+    
+    cookie.maxAge.emplace(3600);
 
     return cookie;
 }
@@ -176,6 +194,19 @@ void Services::get_login_site(const Request &request, Response response)
 {
   std::cout << "Received a GET request, get_login_site is called" << std::endl;
 
+    try 
+    {
+        if(is_valid_session(request))
+        {
+            response.headers().add<Pistache::Http::Header::Location>("/chatsite");
+            response.send(Pistache::Http::Code::See_Other);
+        }
+    } 
+    catch(std::exception e)
+    {
+        std::cout << "exception during valid session in get_login_site handler" << e.what() << std::endl;
+    }
+   
   // Check the request URI
   const std::string uri = request.resource();
 
@@ -202,11 +233,9 @@ void Services::login_handler(const Request &request, Response response)
 
     std::string body_data = w_space(request.body());
     std::cout << "body data request : " << body_data << std::endl;
-
-    
     int and_simbol = body_data.find("&");
    
-    std::string email_addres = body_data.substr(9, and_simbol - 9);       //-1 as the simbol and -9 as teh caracternumber of "email_addres="
+    std::string email_addres = body_data.substr(9, and_simbol - 9); 
     std::string password = body_data.substr(and_simbol + 10);
 
     std::cout << "---------------------- input datas ------------------" << std::endl;
@@ -251,16 +280,15 @@ void Services::login_handler(const Request &request, Response response)
     else
     {
         response.headers().add<Pistache::Http::Header::Location>("/chatsite");
+        response.cookies().add(login_cookie_generator(email_addres));
         response.headers().addRaw(Pistache::Http::Header::Raw{"HX-Redirect", ""});
         response.send(Pistache::Http::Code::See_Other);
-        
     }
-    
 }
 
 void Services::get_chat_site(const Request &request, Response response)
 {
-    std::cout<< "post chat site handler was called" << std::endl;
+    std::cout<< "get chat site handler was called" << std::endl;
     try
     {
         std::string htmlContent;
@@ -596,6 +624,39 @@ void Services::temp_password_handling(const Pistache::Rest::Request &request, Pi
 
     // Set the response body to the generated HTML
     response.send(Pistache::Http::Code::Ok, modalHtml);
+}
+
+void Services::log_out_handler(const Pistache::Rest::Request &request, Pistache::Http::ResponseWriter response)
+{
+    std::cout << "received a POST request, log_out is called." << std::endl;
+
+    /*
+        std::string body_data = w_space(request.body());
+    std::cout << "body data request : " << body_data << std::endl;
+    int and_simbol = body_data.find("&");
+   
+    std::string email_addres = body_data.substr(9, and_simbol - 9);
+    */
+
+    try 
+    {
+        auto cookies = request.cookies();
+        auto cookie_token = cookies.get("login_cookie");
+        std::string login_cookie = cookie_token.value;
+
+        Users::delete_cookie(login_cookie);     //set the cookie value in the db to NULL
+    
+        response.headers().add<Pistache::Http::Header::Location>("/");
+        response.headers().addRaw(Pistache::Http::Header::Raw{"HX-Redirect", ""});
+        response.send(Pistache::Http::Code::See_Other);
+    } 
+    catch(std::exception e) 
+    {
+        std::cout << "exception was catched during login handler " << e.what() << std::endl;
+    }
+
+
+   
 }
 
 void Services::run()

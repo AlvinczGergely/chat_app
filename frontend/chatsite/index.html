@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title></title>
   <script src="https://unpkg.com/htmx.org@1.9.10" integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/htmx.org@1.9.11" integrity="sha384-0gxUXCCR8yv9FM2b+U3FDbsKthCI66oH5IA9fHppQq9DDMHuMauqq1ZHBpJxQ0J0" crossorigin="anonymous"></script>
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat'>
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>
@@ -18,7 +19,7 @@
   <div class="container">
     <div class="row">
       <nav class="menu">
-        <ul class="items">
+        <ul class="items"> 
           <li class="item">
             <i class="fa fa-home" aria-hidden="true"></i>
           </li>
@@ -125,7 +126,15 @@
         <div class="header-chat">
           <i class="icon fa fa-user-o" aria-hidden="true"></i>
           <p class="name">Megan Leib</p>
-          <i class="icon clickable fa fa-ellipsis-h right" aria-hidden="true"></i>
+          <i class="icon clickable fa fa-ellipsis-h right" aria-hidden="true" onclick="toggleDropdown()">
+            <div class="dropdown">
+              <div id="dropdownContent" class="dropdown-content">
+                <a href="#" hx-post="/log_out" hx-indicator="#ind" hx-target="body">log out</a>
+                <a href="#">Option 2</a>
+                <a href="#">Option 3</a>
+            </div>
+            </div>
+          </i>
         </div>
         <div class="messages-chat">
           <div class="message">
@@ -168,5 +177,17 @@
 </body>
 <!-- partial -->
   
+
+<script>
+  function toggleDropdown() {
+  var dropdownContent = document.getElementById("dropdownContent");
+  if (dropdownContent.style.display === "block") {
+    dropdownContent.style.display = "none";
+  } else {
+    dropdownContent.style.display = "block";
+  }
+}
+
+</script>
 </body>
 </html>

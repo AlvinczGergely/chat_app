@@ -5,18 +5,15 @@
 #include "SQLiteCpp/Database.h"
 #include "SQLiteCpp/Exception.h"
 #include "SQLiteCpp/Statement.h"
-#include "user.hpp"
+#include "user.h"
 using namespace Pistache;
 
 
-void Users::insert_into_user_table(std::string email_addres, std::string password, std::string user_name)   //it also creats it, if it not exist
+void Users::insert_into_user_table(std::string email_addres, std::string password, std::string user_name) 
 {
   try 
   { 
-  // Create a connection to the SQLite database named "Users.db3". 
   SQLite::Database db("../../db/Users.db3", SQLite::OPEN_READWRITE|SQLite::OPEN_CREATE);
-  //std::cout << "SQLite database file '" << db.getFilename().c_str() << "' opened successfully\n";
-
 
   SQLite::Transaction transaction(db);
   SQLite::Statement query(db, "INSERT INTO Users (email_addres, password, user_name, cookie) VALUES (?, ?, ?, ?)");
@@ -25,7 +22,6 @@ void Users::insert_into_user_table(std::string email_addres, std::string passwor
   query.bind(3, user_name);
   query.bind(4);
 
-  // Execute the statement
   query.exec();
   transaction.commit();
   }
@@ -45,8 +41,8 @@ void Users::insert_cookie_into_users(std::string email_addres, std::string cooki
 
     SQLite::Transaction transaction(db);
     SQLite::Statement query(db, "UPDATE Users SET cookie = ? where email_addres = ?");
-    query.bind(4, cookie);
-    query.bind(1, email_addres);
+    query.bind(1, cookie);
+    query.bind(2, email_addres);
 
     query.exec();
     transaction.commit();
@@ -105,6 +101,7 @@ bool Users::valid_user(std::string email_addres)
   {
     std::cout << "SQLite exception after valid_user was called: " << e.what() << std::endl;
     std::cout << "Error code: " << e.getErrorCode() << std::endl;
+    return false;
   } 
   
   std::cout << "user: " << email_addres << ", was not found in the data base" << std::endl;
@@ -116,7 +113,6 @@ bool Users::valid_password(std::string email_addres, std::string password)
   try
   {
     SQLite::Database db("../../db/Users.db3", SQLite::OPEN_READWRITE|SQLite::OPEN_CREATE);
-    //std::cout << "SQLite database file '" << db.getFilename().c_str() << "' opened successfully\n";
 
     SQLite::Statement n_query(db, "SELECT password FROM Users Where email_addres = ?");
     n_query.bind(1, email_addres);
@@ -138,8 +134,8 @@ bool Users::valid_password(std::string email_addres, std::string password)
   catch(const std::exception& e)
   {
     std::cout << "exception after valid_password was called: " << e.what() << std::endl;
+    return false;
   }
-  
 }
 
 bool Users::email_alredy_taken(std::string email_addres)
@@ -147,7 +143,6 @@ bool Users::email_alredy_taken(std::string email_addres)
   try
   {
     SQLite::Database db("../../db/Users.db3", SQLite::OPEN_READWRITE|SQLite::OPEN_CREATE);
-    //std::cout << "SQLite database file '" << db.getFilename().c_str() << "' opened successfully\n";
     std::cout << "SQLite database file '" << db.getFilename().c_str() << "' opened successfully\n";
 
     SQLite::Statement n_query(db, "SELECT email_addres FROM Users");
@@ -175,5 +170,52 @@ bool Users::email_alredy_taken(std::string email_addres)
   return false;
 }
 
+bool Users::check_cookie(std::string cookie)
+{
+  try
+  {
+    SQLite::Database db("../../db/Users.db3", SQLite::OPEN_READWRITE|SQLite::OPEN_CREATE);
 
- 
+    SQLite::Statement n_query(db, "SELECT cookie FROM Users");
+
+    while (n_query.executeStep())
+    {
+      std::string database_cookie = n_query.getColumn(0);
+
+      if (database_cookie == cookie)
+      {
+        std::cout << "db containse the cookie" << std::endl;
+        return true;
+      }
+    }
+
+    std::cout << "cookie was not founde"  << std::endl;
+    return false;
+  }
+  catch(const std::exception& e)
+  {
+    std::cout << "exception after check_cookie was called: " << e.what() << std::endl;
+  }
+  return false;
+}
+
+bool Users::delete_cookie(std::string cookie_value)
+{
+  try
+  {
+    SQLite::Database db("../../db/Users.db3", SQLite::OPEN_READWRITE|SQLite::OPEN_CREATE);
+
+    SQLite::Transaction transaction(db);
+    SQLite::Statement query(db, "UPDATE Users SET cookie = NULL where cookie = ?");
+    query.bind(1, cookie_value);
+
+    query.exec();
+    transaction.commit();
+  }
+  catch (std::exception& e)
+  {
+    std::cout << "exception after delete_cookie was called: " << e.what() << std::endl;
+    return false;
+  } 
+  return true;
+}

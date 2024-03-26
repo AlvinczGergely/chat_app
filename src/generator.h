@@ -25,7 +25,7 @@ public:
 
   std::string birth_date_generator();
 
-  std::string random_number_generator(int digit_number);
+  static std::string random_number_generator(int digit_number);
 
   name_variables name_generator();
 

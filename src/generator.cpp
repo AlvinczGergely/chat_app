@@ -1,4 +1,4 @@
-#include "generator.hpp"
+#include "generator.h"
 #include <vector>
 #include <random>
 #include <string>
@@ -10,9 +10,8 @@
 #include "pugixml/src/pugixml.hpp"
 
 
-
-  std::string Generators::phone_number_generator()
-  {
+std::string Generators::phone_number_generator()
+{
     std::string mobile_number = "+36 ";
     std::vector<std::string> service_provider = {"20 ", "30 ", "40 ", "50 ", "70 ", "80 ", "90 "};   //szolgáltatók karakterei
 
@@ -28,12 +27,10 @@
     }
 
     return mobile_number;                               //teljes szám visszaadása
-  }
+}
 
-
-
-  std::string Generators::birth_date_generator()
-  {
+std::string Generators::birth_date_generator()
+{
     int year = 0;
     int month = 0;
     int day = 0;
@@ -65,11 +62,10 @@
     std::string date = std::to_string(year) + "-" + s_month + "-" + s_day; 
     
     return date;
-  }
+}
 
-
-  std::string Generators::random_number_generator (int digit_number)  
-  {
+std::string Generators::random_number_generator (int digit_number)  
+{
     srand (time(NULL));
 
     int num = rand() % 89999 + 10000;
@@ -79,12 +75,10 @@
     // 2 digit min: 10 max: 89
     // 1 digit min: 1 max: 9
     return std::to_string(num);
-  }
+}
 
-
-
-  Generators::name_variables Generators::name_generator()
-  {
+Generators::name_variables Generators::name_generator()
+{
 
     pugi::xml_document doc_one;                                //pugi xml 
     pugi::xml_document doc_two;
@@ -117,11 +111,10 @@
     name_variables result = {ran_first_name, ran_last_name, ran_full_name};
 
     return result;
-  } 
+} 
 
-
-  std::string Generators::residence_generator(int residence_variant)
-  {
+std::string Generators::residence_generator(int residence_variant)
+{
     pugi::xml_document doc_zipcode;
     pugi::xml_document doc_city;
     pugi::xml_document doc_street;
@@ -181,11 +174,9 @@
     }
 
     return full_residence;
-  }
+}
 
-
-
-  std::string Generators::file_name_generator()
+std::string Generators::file_name_generator()
 {
   std::vector<std::string> file_extensions = {"txt", "doc", "docx", "pdf", "ppt", "pptx", "xls", "xlsx", "csv", 
                                               "jpg", "jpeg", "png", "gif", "bmp", "tif", "tiff", "mp3", "wav", "avi", 
@@ -208,17 +199,16 @@
   return full_file_name;
 }
 
-
-  std::string Generators::email_adress_generator()
-  {
-    pugi::xml_document doc_one;                                //pugi xml 
+std::string Generators::email_adress_generator()
+{
+    pugi::xml_document doc_one;                                
     pugi::xml_document doc_two;
 
 
     pugi::xml_parse_result result_first_name = doc_one.load_file("../../src/XML_test_files/first_names.xml");       //file beimportálása
     pugi::xml_parse_result result_last_name = doc_two.load_file("../../src/XML_test_files/last_names.xml");
 
-    pugi::xml_node first_names = doc_one.child("first_names");         //node létrehozása
+    pugi::xml_node first_names = doc_one.child("first_names");
     pugi::xml_node last_names = doc_two.child("last_names");
 
     std::vector<std::string> first_names_vec;
@@ -242,4 +232,4 @@
     std::string email_adress = ran_first_name + '.' +  ran_last_name + '@' + "gmail.com";
 
     return email_adress;
-  }
+}

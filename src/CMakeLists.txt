@@ -26,20 +26,6 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(json)
 
-FetchContent_Declare(
- Boost
- GIT_REPOSITORY https://github.com/boostorg/boost.git
- GIT_TAG        boost-1.77.0
-)
-FetchContent_MakeAvailable(Boost)
-
-FetchContent_Declare(
-    mailio
-    GIT_REPOSITORY https://github.com/karastojko/mailio.git
-    GIT_TAG 0.22.0
-)
-FetchContent_MakeAvailable(mailio)
-
 set(SOURCES "main.cpp" "generator.cpp" "user.cpp" "services.cpp" "pugixml/src/pugixml.cpp")
 add_executable(${PROJECT_NAME} ${SOURCES})
 
@@ -49,8 +35,6 @@ target_link_libraries(${PROJECT_NAME}
     SQLiteCpp
     sqlite3
     pistache
-    Boost
-    mailio
   PRIVATE 
     nlohmann_json::nlohmann_json
   )
@@ -58,6 +42,5 @@ target_link_libraries(${PROJECT_NAME}
 target_include_directories(${PROJECT_NAME} PRIVATE 
   ${SQLiteCpp_SOURCE_DIR}/include
   ${Pistache_SOURCE_DIR}/include
-  ${mailio_SOURCE_DIR}/include
   )
 

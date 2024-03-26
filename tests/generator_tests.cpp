@@ -1,7 +1,7 @@
   #include <gtest/gtest.h>
   #include <regex>
 
-  #include "../src/generator.hpp"
+  #include "../src/generator.h"
 
 namespace{
   
